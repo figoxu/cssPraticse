@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Figo一下你也知道</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .searchBar {
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .searchBar ul {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .searchBar ul li {
+            float: left;
+        }
+
+        .searchBox {list-style: none;display: inline-block;border: 1px solid blue;position: relative;
+        }
+        .inputWrap {
+            width: 540px;
+            height: 30px;
+            border: 1px;
+            border-color: gray;
+            margin-left: 5px;
+        }
+        .ico {
+            width: 18px;
+            height: 30px;
+            background: url('./images/camera_new_5606e8f.png')  0px 10px no-repeat;
+            position: absolute;
+            right: 157px;
+            top:-3px;
+        }
+        .btn{
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            background-color: blue;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <div style="text-align: center;">
+        <img src="images/bd_logo1.png" width="270" height="129">
+    </div>
+    <div class="searchBar">
+        <ul class="searchBox">
+            <li class="inputWrap">
+                <input type="text" maxlength="10" style="width: 500px;line-height: 28px;float: left;"/>
+            </li>
+            <li class="ico"></li>
+            <li class="btn">
+                百度一下
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
