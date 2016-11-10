@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+        .box{
+            margin: 20px auto;
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-top-color: #2DCB70;
+            border-right-color:gold;
+            border-bottom-color: #333333;
+            border-left-color: red;
+        }
+        .box1{
+            margin: 5px auto;
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-top-color: #2DCB70;
+        }
+        .box2{
+            margin: 5px auto;
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-left-color: red;
+        }
+        .box3 {
+            margin: 5px auto;
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-right-color: gold;
+        }
+        .box4{
+            margin: 0 auto;
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-bottom-color: #333333;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+
+
+<style>
+    .wrap{
+        position: relative;width: 20px;height: 20px;background-color: white;
+    }
+    .boxA{
+        margin: 0 auto;
+        width: 0px;
+        height: 0px;
+        border: 10px solid transparent;
+        border-bottom-color: #333333;
+    }
+    .boxB{
+        margin: 0 auto;
+        width: 0px;
+        height: 0px;
+        border: 8px solid transparent;
+        border-bottom-color: white;
+        position: absolute;
+        left: 2px;;
+        top: 4px;
+    }
+</style>
+<!--基于层叠的2个三角型，模拟的箭头。支持各种颜色定义和大小调整-->
+<!--style 居中-->
+<div class="wrap" style="margin: 0 auto;">
+    <div class="boxA"></div>
+    <div class="boxB"></div>
+</div>
+</body>
+</html>
