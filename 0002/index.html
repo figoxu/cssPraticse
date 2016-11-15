@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: #f4f7ed;
+            min-width: 600px;
+            font-size: 12px;
+        }
+        .head{
+            background: url("./images/logo-sign.png") no-repeat;
+            margin: 0 auto;
+            width: 190px;
+            height: 56px;
+            margin-top: 53px;
+        }
+        .navBar{
+            width:385px;
+            height: 50px;
+            line-height: 50px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .navBar span{
+            font-size: 13px;
+        }
+        .navBar a{
+            color: #38adff;
+        }
+        .formBody{
+            width:385px;
+            margin: 0 auto;
+            margin-top: 20px;
+            position: relative;
+
+            background-color: white;
+            border: 1px solid #CCCCCC;
+            border-radius: 10px;
+        }
+        .wrap{
+            top:-19px;
+            left:140px;
+            z-index: -1;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background-color: #f4f7ed;
+        }
+        .boxA{
+            margin: 0 auto;
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-bottom-color: #333333;
+        }
+        .boxB{
+            margin: 0 auto;
+            width: 0px;
+            height: 0px;
+            border: 8px solid transparent;
+            border-bottom-color: white;
+            position: absolute;
+            left: 2px;;
+            top: 4px;
+        }
+
+        ul{
+            list-style: none;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .formList {
+            /*margin-left: 30px;*/
+            width: 320px;
+        }
+        .formList li {
+            width: 320px;
+            border: 1px solid #95B93D;
+            height:45px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        .formList li input{
+            width: 300px;
+            line-height: 43px;
+            font-size: 16px;
+            margin-left: 5px;
+            border: 0px;
+        }
+        .formLine{
+            display: block;
+            width: 320px;
+            height: 44px;
+        }
+        .formLine li{
+            margin-top: 6px;
+            font-size: 12px;
+            color: #CCCCCC;
+        }
+        .formLine .left{
+            float: left;
+        }
+        .formLine .right{
+            float:right;
+        }
+
+        .right a{
+            color: #CCCCCC;
+            text-decoration: dashed;
+        }
+        .formBody button{
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+        }
+
+        .formBody span{
+            text-align: center;
+            display: block;
+        }
+        .formBody span a{
+            margin: 0 auto;
+        }
+
+        .formBody button{
+            width: 300px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: #95B93D;
+        }
+
+        .formBody span{
+            font-size: 12px;
+            height: 55px;
+            padding-top: 17px;
+        }
+
+        .wx{
+            margin: 0 auto;
+            text-align: center;
+            width: 300px;
+            padding-top: 25px;
+        }
+
+        .cp{
+            margin: 0 auto;
+            text-align: center;
+            width: 300px;
+            color: #CCCCCC;
+            padding-top: 68px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="head"></div>
+
+<div class="navBar">
+    账户登录 <span>或</span> <a>钉钉登录</a>
+</div>
+<div class="formBody">
+    <div class="wrap">
+        <div class="boxA"></div>
+        <div class="boxB"></div>
+    </div>
+    <ul class="formList">
+        <li>
+            <input type="text" placeholder="登录邮箱"/>
+        </li>
+        <li>
+            <input type="password" placeholder="密码">
+        </li>
+    </ul>
+    <ul class="formLine">
+        <li class="left">
+            <input type="checkbox" id="chk">
+            <label for="chk">下次自动登录</label>
+        </li>
+        <li class="right">
+            <a href="#">忘记密码了?</a>
+        </li>
+    </ul>
+    <button>登录</button>
+    <span>
+        没有账户？<a>立即注册 →</a>
+    </span>
+</div>
+<div class="wx">
+    <img src="images/wx.jpg"/>
+    微信登录
+</div>
+<div class="cp">
+    © 彩程设计
+</div>
+</body>
+</html>
