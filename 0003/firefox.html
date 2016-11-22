@@ -9,15 +9,16 @@
             padding: 0;
             font-size: 12px;
         }
-        body{
+
+        body {
             background-color: #F4EDFF;
         }
 
         .footer {
             width: 100%;
             height: 50px;
-            border:1px solid #D8D8D8;
-            background:rgba(242, 242, 242, 0.98) url("./image/noise.png") repeat-x;
+            border: 1px solid #D8D8D8;
+            background: rgba(242, 242, 242, 0.98) url("./image/noise.png") repeat-x;
             position: fixed;
             bottom: 0px;
             z-index: 1;
@@ -29,7 +30,8 @@
             display: inline-block;
             margin: 16px 34px 0 0;
         }
-        .footer #toolbar li{
+
+        .footer #toolbar li {
             list-style: none;
             float: left;
             padding: 0 6px;
@@ -39,27 +41,31 @@
 
         #toolbar > li {
             padding: 5px;
+            position: relative;
         }
 
-        #toolbar > li:hover{
-            border:1px solid #C9CED2;
+        #toolbar > li:hover {
+            border: 1px solid #C9CED2;
             background-color: #D8D8D8;
             border-radius: 3px;
         }
 
-        #toolbar > li[data-menu="page-settings"]::before{
+        #toolbar > li[data-menu="page-settings"]::before {
             width: 24px;
             background-position: -42px 3px;
         }
-        #toolbar > li[data-menu="tools"]{
+
+        #toolbar > li[data-menu="tools"] {
             width: 70px;
         }
-        #toolbar > li[data-menu="tools"]::before{
+
+        #toolbar > li[data-menu="tools"]::before {
             width: 24px;
             background-position: -11px 3px;
         }
-        #toolbar > li::before{
-        background:  rgba(0, 0, 0, 0) url("./image/bottom.png") no-repeat scroll 0 0;
+
+        #toolbar > li::before {
+            background: rgba(0, 0, 0, 0) url("./image/bottom.png") no-repeat scroll 0 0;
             display: inline-block;
             content: "　";
             padding: 5px 0;
@@ -72,10 +78,65 @@
     <img src="image/Logo.png" style="margin-top: 8px;margin-left: 40px;"/>
 
     <ul id="toolbar">
-        <li>访问记录</li>
-        <li data-menu="tools">工具箱</li>
-        <li data-menu="page-settings">页面设置</li>
+        <li data-menu="related-tabs">
+            访问记录
+            <div id="related-tabs" style="display: none;right: 0px;bottom: 30px;position: absolute;">
+                aaaa
+            </div>
+        </li>
+        <li data-menu="tools">工具箱
+            <div id="tools" style="display: none;right: 0px;bottom: 30px;position: absolute;">
+                bbbb
+            </div>
+        </li>
+        <li data-menu="page-settings">页面设置
+            <div id="page-settings" style="display: none;right: 0px;bottom: 30px;position: absolute;">
+                cccc
+            </div>
+        </li>
     </ul>
 </div>
 </body>
+
+<script type="text/javascript">
+    function stopPropagation(e){
+        e=window.event||e;
+        if(document.all){
+            e.cancelBubble=true;
+        }else{
+            e.stopPropagation();
+        }
+    }
+    function $ById(identity) {
+        return document.getElementById(identity);
+    }
+    function $NBySel(selector) {
+        return document.querySelectorAll(selector);
+    }
+    function setMenu(identity) {
+        $ById("toolbar").className = identity;
+        var menus = $NBySel("#toolbar li");
+        for (var i = 0; i < menus.length; i++) {
+            var menu = menus[i];
+            var element = menu.querySelector("#" + menu.dataset.menu);
+            menu.dataset.menu == identity ? element.style.display = 'block' : element.style.display = 'none';
+        }
+    }
+    document.onclick = function(){
+        setMenu("");
+    };
+    window.onload = function () {
+        var menus = $NBySel("#toolbar li");
+        for (var i = 0; i < menus.length; i++) {
+            var menu = menus[i];
+            menu.onclick = function (e) {
+                stopPropagation(e);
+                setMenu(this.dataset.menu);
+            }
+        }
+    };
+    console.log("helloB");
+</script>
+
+
 </html>
